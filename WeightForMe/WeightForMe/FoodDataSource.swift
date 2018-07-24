@@ -10,15 +10,15 @@ import Foundation
 
 class FoodModel {
     var name: String
-    var macros = [
-        "Protein": 0,
-        "Carbs": 0,
-        "Fats": 0
-    ]
-    var calories: Float{
-        macros["Protein"] * 4 + macros["Carbs"] * 4 + macros["Fats"] * 9
+    var imageURL: URL?
+    var macros = ["Protein": 0.0, "Carbs": 0.0, "Fats": 0.0]
+    var calories: Double {
+        return macros["Protein"]! * 4 + macros["Carbs"]! * 4 + macros["Fats"]! * 9
     }
-    init() {
-        self.name = ""
+    
+    init(name: String, imageURL: URL? = nil, macrosValues: [Double]){
+        self.name = name
+        self.imageURL = imageURL
+        self.macros = ["Protein": macrosValues[0], "Carbs": macrosValues[1], "Fats": macrosValues[2]]
     }
 }

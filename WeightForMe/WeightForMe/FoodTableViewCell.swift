@@ -32,4 +32,12 @@ class FoodTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func setupCellWith(item: FoodModel){
+        self.foodNameLabel.text = item.name
+        self.proteinCountLabel.text = String(item.macros["Protein"]!)
+        self.carbsCountLabel.text = String(item.macros["Carbs"]!)
+        self.fatsCountLabel.text = String(item.macros["Fats"]!)
+        self.caloriesCountLabel.text = String(item.calories)
+    }
+    
 }
