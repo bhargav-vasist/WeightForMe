@@ -11,16 +11,16 @@ import UIKit
 class FoodTableViewCell: UITableViewCell {
 
     @IBOutlet weak var foodImage: UIImageView!
-    
+
     @IBOutlet weak var foodNameLabel: UILabel!
     @IBOutlet weak var foodQuantityTextField: UITextField!
-    
+
     @IBOutlet weak var caloriesCountLabel: UILabel!
-    
+
     @IBOutlet weak var proteinCountLabel: UILabel!
     @IBOutlet weak var fatsCountLabel: UILabel!
     @IBOutlet weak var carbsCountLabel: UILabel!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -31,13 +31,13 @@ class FoodTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
-    func setupCellWith(item: FoodModel){
+
+    func setupCellWith(item: FoodModel) {
         self.foodNameLabel.text = item.name
         self.proteinCountLabel.text = String(item.macros["Protein"]!)
         self.carbsCountLabel.text = String(item.macros["Carbs"]!)
         self.fatsCountLabel.text = String(item.macros["Fats"]!)
         self.caloriesCountLabel.text = String(item.calories)
     }
-    
+
 }

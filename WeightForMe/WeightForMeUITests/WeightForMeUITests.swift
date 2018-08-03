@@ -5,6 +5,7 @@
 //  Created by Bhargav Vasist on 24/07/18.
 //  Copyright © 2018 Bhargav Vasist. All rights reserved.
 //
+// swiftlint:disable all
 
 import XCTest
 
