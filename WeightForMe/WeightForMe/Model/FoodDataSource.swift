@@ -15,8 +15,8 @@ class FoodModel {
     var calories: Double {
         return macros["Protein"]! * 4 + macros["Carbs"]! * 4 + macros["Fats"]! * 9
     }
-    
-    init(name: String, imageURL: URL? = nil, macrosValues: [Double]){
+
+    init(name: String, imageURL: URL? = nil, macrosValues: [Double]) {
         self.name = name
         self.imageURL = imageURL
         self.macros = ["Protein": macrosValues[0], "Carbs": macrosValues[1], "Fats": macrosValues[2]]
